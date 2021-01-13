@@ -58,6 +58,7 @@ jobs:
       run: |
         if [ "$BUILD_SKIA_FROM_SOURCE" == "0" ]; then
           pip install githubrelease
+          echo "++++++++++++++++++S{PWD}++++++++++++++++++++++++++++++++"
           python ci/download_libskia.py -d "${SKIA_LIBRARY_DIR}"
         fi
     - name: Build and Install Wheels
